@@ -1,0 +1,39 @@
+<form>
+  <img src="user.png">
+  <input type="text" placeholder="nome" name="nome" class="form-control">
+  <input type="password" placeholder="senha" name="senha" class="form-control">
+  <input type="date" name="data" class="form-control">
+  <input type="text" placeholder="sexo" name="sexo" class="form-control">
+  <div><label>is admin?</label><input type="checkbox" name="isAdmin" class="form-check-input"></div>
+  <input type="button" value="cadastrar"  class="btn btn-success">
+  <input type="button" value="alterar"  class="btn btn-primary">
+  <input type="button" value="remover"  class="btn btn-danger">
+  <input type="button" value="cancelar"  class="btn btn-secondary">
+</form>
+
+<table class="table">
+  <thead>
+      <tr>
+        <th>Número</th>
+        <th>Rua</th>
+        <th>Bairro</th>
+        <th>Cidade</th>
+        <th>CEP</th>
+        <th>Estado</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let endereco of enderecos">
+        <td>{{endereco.numero}}</td>
+        <td>{{endereco.rua}}</td>
+        <td>{{endereco.bairro}}</td>
+        <td>{{endereco.cidade}}</td>
+        <td>{{endereco.cep}}</td>
+        <td>{{endereco.estado}}</td>
+        <td><input type="button" value="remover" (click)="onDelete(endereco)" class="btn btn-danger"></td>
+      </tr>
+  </tbody>
+</table>
+
+
+
