@@ -1,14 +1,15 @@
-<form>
+<form (ngSubmit)="onSubmit()">
   <img src="user.png">
-  <input type="text" placeholder="nome" name="nome" class="form-control">
-  <input type="password" placeholder="senha" name="senha" class="form-control">
-  <input type="date" name="data" class="form-control">
-  <input type="text" placeholder="sexo" name="sexo" class="form-control">
-  <div><label>is admin?</label><input type="checkbox" name="isAdmin" class="form-check-input"></div>
-  <input type="button" value="cadastrar"  class="btn btn-success">
-  <input type="button" value="alterar"  class="btn btn-primary">
-  <input type="button" value="remover"  class="btn btn-danger">
-  <input type="button" value="cancelar"  class="btn btn-secondary">
+  <input type="number" placeholder="Número" name="numero" [(ngModel)]="numero" class="form-control" >
+  <input type="text" placeholder="Rua" name="rua" [(ngModel)]="rua" class="form-control" >
+  <input type="text" placeholder="Bairro" name="bairro" [(ngModel)]="bairro" class="form-control" >
+  <input type="text" placeholder="Cidade" name="cidade" [(ngModel)]="cidade" class="form-control" >
+  <input type="text" placeholder="Cep" name="cep" [(ngModel)]="cep" class="form-control" >
+  <input type="text" placeholder="Estado" name="estado" [(ngModel)]="estado" class="form-control" >
+  <input type="submit" value="cadastrar" class="btn btn-success">
+<!--  <input type="button" value="alterar"  class="btn btn-primary">-->
+<!--  <input type="button" value="remover"  class="btn btn-danger">-->
+<!--  <input type="button" value="cancelar"  class="btn btn-secondary">-->
 </form>
 
 <table class="table">

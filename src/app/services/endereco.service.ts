@@ -15,6 +15,10 @@ export class EnderecoService {
     );
   }
   deleteEnderecos(endereco: Endereco): Observable<Endereco>{
-    return this.http.delete<Endereco>(`${this.apiUrl}/${endereco.id}`);
+    console.log(endereco.id);
+    return this.http.delete<Endereco>(`${this.apiUrl}${endereco.id}`);
+  }
+  saveEndereco(endereco: Endereco): Observable<Endereco> {
+      return this.http.post<Endereco>(`${this.apiUrl}`, endereco);
   }
 }
